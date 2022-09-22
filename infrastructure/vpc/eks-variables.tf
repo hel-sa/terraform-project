@@ -1,0 +1,37 @@
+variable "cluster_name" {
+  description = "Name of EKS cluster"
+  type = string
+  default = "eksdemo"
+}
+
+#The CIDR block to assign Kubernetes service IP addresses from
+#If block not specified, Kubernetes assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks
+variable "cluster_service_ipv4_cidr" {
+  description = "service ipv4 cidr for kubernetes cluster"
+  type = string
+  default = null
+}
+
+variable "cluster_version" {
+  type = string
+  default = null
+}
+
+#Network Settings
+variable "cluster_endpoint_private_access" {
+  description = "Indicates whether or not the Amazon EKS private API server endpoint is enabled"
+  type = bool
+  default = false
+}
+
+variable "cluster_endpoint_public_access" {
+  description = "Indicates whether or not the Amazon EKS public API server endpoint is enabled"
+  type = bool
+  default = true
+}
+
+variable "cluster_endpoint_public_access_cidrs" {
+  description = "List of CIDR blocks which can access the Amazon EKS public API server endpoint."
+  type        = list(string)
+  default     = ["0.0.0.0/0"]
+} #for access through kubectl
