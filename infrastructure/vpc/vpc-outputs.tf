@@ -1,5 +1,4 @@
 #To reference the VPC networking information
-#vpc is just the module name in vpc.vpc_id
 
 output "vpc_id" {
   description = "The ID of the VPC"
