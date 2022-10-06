@@ -1,3 +1,6 @@
+#aws_access_key = 
+#aws_secret_key =
+  
 vpc_name = "custom-vpc"
 vpc_cidr_block = "10.0.0.0/16"
 #vpc_availability_zones = [ "eu-central-1a", "eu-central-1b" ]
