@@ -4,7 +4,7 @@
 variable "aws_region" {
   description = "Region in which AWS Resources to be created"
   type = string
-  default = "eu-central-1"
+  default = "eu-west-2"
 }
 #Environment Variable
 variable "environment" {
