@@ -5,7 +5,7 @@ variable "aws_secret_key" {}
 #AZs dynamically
 data "aws_availability_zones" "available" {
   #state = "available"
-  exclude_names = [ "eu-central-1c" ]
+  exclude_names = [ "eu-west-2c" ]
 }
 
 module "vpc" {
